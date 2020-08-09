@@ -6,11 +6,12 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 import com.cjet.demo.exception.MyJSonException;
 
 @Aspect
-@Configuration
+@Component
 public class ExceptionAspect {
 	private static final Logger LOGGER = LogManager.getLogger(ExceptionAspect.class);
 	private boolean jsonError;
